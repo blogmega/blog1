@@ -1,6 +1,0 @@
----
-layout: default
----
-<div class="box-card">
-{% include postcard.html %}
-</div>
