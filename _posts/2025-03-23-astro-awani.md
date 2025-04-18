@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Watch Astro Awani Live – Stay Updated with Malaysia’s Latest News
-description: Stream Astro Awani Live online and stay informed with breaking news, current affairs, and insightful discussions from Malaysia’s leading news channel.
+title: Tonton Astro Awani Live – Sentiasa Peka dengan Berita Terkini Malaysia
+description: Strim Astro Awani Live secara dalam talian dan ikuti berita terkini, isu semasa dan perbincangan mendalam daripada saluran berita utama Malaysia.
 image: /assets/images/astro-awani-live.jpg
 categories: tv malaysia
-keyword: TV Online Malaysia, Astro Awani Live, Malaysia News Channel, Stream Astro Awani, Online TV Malaysia
+keyword: TV Online Malaysia, Astro Awani Live, Saluran Berita Malaysia, Strim Astro Awani, TV Dalam Talian Malaysia
 date: 2025-03-23
 permalink: astro-awani
 videoplayID: https://saluranmelayu.blogspot.com/2023/02/astro-awani.html
@@ -14,8 +14,8 @@ videoplayID: https://saluranmelayu.blogspot.com/2023/02/astro-awani.html
   src=page.videoplayID
 %}
 
-**Astro Awani Live** is one of Malaysia’s most trusted news channels, delivering up-to-the-minute coverage on politics, current affairs, and national issues. Whether you're at home or on the go, you can stream Astro Awani online and stay connected with real-time news and in-depth analysis.
+**Astro Awani Live** merupakan antara saluran berita yang paling dipercayai di Malaysia, menyampaikan liputan terkini mengenai politik, isu semasa, dan perkembangan penting negara. Sama ada anda di rumah atau dalam perjalanan, anda boleh menonton Astro Awani secara dalam talian dan kekal terhubung dengan berita masa nyata serta analisis yang mendalam.
 
-From breaking headlines to exclusive interviews and talk shows, Astro Awani provides a reliable platform for Malaysians to stay informed. With its bilingual reporting and commitment to journalistic integrity, it remains a go-to source for balanced and timely information.
+Daripada berita tergempar hingga temu bual eksklusif dan rancangan bual bicara, Astro Awani menyediakan platform yang kukuh untuk rakyat Malaysia mengikuti perkembangan semasa. Dengan laporan dwibahasa dan komitmen terhadap integriti kewartawanan, ia kekal sebagai sumber maklumat yang seimbang dan boleh dipercayai.
 
-Tune in now and experience the convenience of **TV Online Malaysia** through Astro Awani Live – your window into the heart of Malaysian news.
+Tonton sekarang dan alami kemudahan **TV Online Malaysia** menerusi Astro Awani Live – jendela anda kepada dunia berita Malaysia.
