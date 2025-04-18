@@ -12,7 +12,6 @@ layout: default
   <div class="custom-card">24</div>
 </div>
 <style>
-/* Hindari konflik dengan prefix 'custom-' */
 .custom-box-card {
   padding: 1rem;
   display: grid;
