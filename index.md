@@ -2,10 +2,36 @@
 layout: default
 ---
 
-<div class="lead pretty-links">
-  Hi! this is just a sample **intro text**. You would normally put your [full name](about/) here and say something *smart* about yourself.
-
-  This could also be the good place to say were you are coming from, what you [do for a living](work/) and maybe what you are [interested in](projects/). You might also be [writing](articles/) about stuff.
-
-  But after all this is your site and I'm just a **placeholder text** so what would i know about some *home page content*.
+<div class="box-card">
+<div class="card">0</div>
+<div class="card">1</div>
+<div class="card">2</div>
+<div class="card">4</div>
+<div class="card">8</div>
+<div class="card">16</div>
+<div class="card">24</div>
 </div>
+
+<style>.box-card {
+  padding: 1rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background: #e2e1e0;
+  font-family: system-ui, sans-serif;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 200px;
+
+  box-shadow:
+    0 0 1px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.08),
+    0 6px 12px 2px rgba(0, 0, 0, 0.2); /* static shadow */
+}
+</style>
