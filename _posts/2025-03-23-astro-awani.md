@@ -7,7 +7,7 @@ categories: tv malaysia
 keyword: TV Online Malaysia, Astro Awani Live, Malaysia News Channel, Stream Astro Awani, Online TV Malaysia
 date: 2025-03-23
 permalink: astro-awani
-videoplayID: astroawani123
+videoplayID: https://styleanecdotes.blogspot.com/2024/11/tv2.html
 ---
 
 {% include videoplayer.html
