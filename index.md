@@ -2,36 +2,49 @@
 layout: default
 ---
 
-<div class="box-card">
-<div class="card">0</div>
-<div class="card">1</div>
-<div class="card">2</div>
-<div class="card">4</div>
-<div class="card">8</div>
-<div class="card">16</div>
-<div class="card">24</div>
+<div class="custom-box-card">
+  <div class="custom-card">0</div>
+  <div class="custom-card">1</div>
+  <div class="custom-card">2</div>
+  <div class="custom-card">4</div>
+  <div class="custom-card">8</div>
+  <div class="custom-card">16</div>
+  <div class="custom-card">24</div>
 </div>
-
-<style>.box-card {
+<style>
+/* Hindari konflik dengan prefix 'custom-' */
+.custom-box-card {
   padding: 1rem;
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   background: #e2e1e0;
   font-family: system-ui, sans-serif;
+  box-sizing: border-box;
 }
 
-.card {
-  width: 200px;
-  height: 200px;
+.custom-card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
   background: white;
   border-radius: 6px;
   text-align: center;
-  line-height: 200px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
   box-shadow:
     0 0 1px rgba(0, 0, 0, 0.1),
     0 1px 2px rgba(0, 0, 0, 0.08),
-    0 6px 12px 2px rgba(0, 0, 0, 0.2); /* static shadow */
+    0 6px 12px 2px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    0 6px 20px rgba(0, 0, 0, 0.19);
 }
 </style>
+
