@@ -1,14 +1,13 @@
-# The main config file for your Jekyll template
-
-# Site settings
-title: Jackal               # used for the html title of every page
-desc: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-
-url: http://jackal.com      # put your website hosting url here
-baseurl: '/blog1'                 # the subpath of your site, e.g. /blog
+title: Nama Situs Kamu
+description: Deskripsi umum situs kamu
+url: ""
+baseurl: "/blog1" # jika root, atau "/blog" jika di subfolder
+image: /assets/img/og-default.jpg
+keyword: Streaming TV Malaysia, Live TV Online, Drama Melayu
+twitter_username: akunTwitterKamu
+author:
+  name: Nama Penulis atau Organisasi
+  
 permalink: /:year/:title/   # how should we display posts url
 
 # Meta settings
