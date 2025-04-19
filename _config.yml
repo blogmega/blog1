@@ -5,9 +5,9 @@ url: "https://www.tvmalaysia.homes"
 baseurl: "" # jika root, atau "/blog" jika di subfolder
 image: /assets/img/logo.webp
 keyword: tv malaysia online, tonton tv online, saluran tv malaysia, tv3 live, rtm online, astro online, siaran langsung tv malaysia, tv percuma malaysia, tonton saluran malaysia, live tv malaysia
-twitter_username: akunTwitterKamu
+twitter_username: "tvmalaysiahomes"
 author:
-  name: Nama Penulis atau Organisasi
+  name: "Admin TVMalaysia"
   
 permalink: /:year/:title/   # how should we display posts url
 
