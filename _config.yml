@@ -11,12 +11,7 @@ author:
   
 permalink: /:year/:title/   # how should we display posts url
 
-# Meta settings
-email: jackal@gmail.com
-author: The Jackal
-twitter_username: clenemt
-github_username: clenemt
-github_source: jackal
+author: TVMalaysia
 
 # Put your ga tracking code below
 google_analytics: 'UA-XXXXXXXX-X'
