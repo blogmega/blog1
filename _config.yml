@@ -14,7 +14,7 @@ permalink: /:year/:title/   # how should we display posts url
 author: TVMalaysia
 
 # Put your ga tracking code below
-google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'G-JQC3CKKM9L'
 
 # Pagination settings
 paginate: 5                           # number of posts to show per page
