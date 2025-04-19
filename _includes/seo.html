@@ -1,0 +1,64 @@
+{%- assign meta_title = page.title | default: site.title -%}
+{%- assign meta_description = page.description | default: page.excerpt | default: site.description -%}
+{%- assign meta_image = page.image | default: site.image | default: '/assets/img/og-default.jpg' -%}
+{%- assign meta_keywords = page.keyword | default: site.keyword -%}
+{%- assign meta_url = page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url -%}
+
+<!-- Title -->
+<title>{{ meta_title }}{% unless page.title == nil %} | {{ site.title }}{% endunless %}</title>
+
+<!-- Basic Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="{{ meta_description | strip_html | strip_newlines }}">
+{% if meta_keywords %}
+<meta name="keywords" content="{{ meta_keywords }}">
+{% endif %}
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ meta_url }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ meta_title }}">
+<meta property="og:description" content="{{ meta_description | strip_html | strip_newlines }}">
+<meta property="og:url" content="{{ meta_url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:image" content="{{ site.url }}{{ meta_image }}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ meta_title }}">
+<meta name="twitter:description" content="{{ meta_description | strip_html | strip_newlines }}">
+<meta name="twitter:image" content="{{ site.url }}{{ meta_image }}">
+{% if site.twitter_username %}
+<meta name="twitter:site" content="@{{ site.twitter_username }}">
+{% endif %}
+
+<!-- JSON-LD Structured Data (Basic Article/Website Schema) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{% if page.layout == 'post' %}Article{% else %}WebPage{% endif %}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ meta_url }}"
+  },
+  "headline": "{{ meta_title }}",
+  "description": "{{ meta_description | strip_html | strip_newlines }}",
+  "image": "{{ site.url }}{{ meta_image }}",
+  "datePublished": "{% if page.date %}{{ page.date | date_to_xmlschema }}{% endif %}",
+  "author": {
+    "@type": "Organization",
+    "name": "{{ site.author.name | default: site.title }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/img/logo.png"
+    }
+  }
+}
+</script>
