@@ -5,8 +5,7 @@
 {%- assign meta_url = page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url -%}
 
 <!-- Title -->
-<title>{{ meta_title }}{% unless page.title == nil %} | {{ site.title }}{% endunless %}</title>
-
+<title>{{ meta_title }}{% if page.title %} | {{ site.seo_title | default: site.title }}{% endif %}</title>
 <!-- Basic Meta -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
