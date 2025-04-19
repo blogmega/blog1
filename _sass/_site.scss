@@ -61,7 +61,7 @@
 
 @include mq-up(sm) {
   .site-header {
-    margin: $spacer4 0 $spacer2;
+    margin: 1rem 0 1rem;
   }
 
   .site-title {
