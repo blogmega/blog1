@@ -134,29 +134,77 @@ nav {
     font-size: 20px;
 }
 
-/* Section Box */
-.section-box {
-    margin-bottom: 30px;
-}
-
-.section-title {
-    font-size: 18px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Channel Grid */
+/* Container Grid */
 .channel-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 20px;
 }
 
+/* Card Channel */
 .channel-card {
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    display: block;
     text-align: center;
-    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Kotak Logo */
+.logo-container {
+    background: #1e293b; /* Warna background kotak jika gambar transparan */
+    height: 90px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #334155;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Pengaturan Gambar Logo */
+.logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Menjaga rasio gambar agar tidak gepeng */
+}
+
+/* Nama Channel di bawah logo */
+.channel-name {
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* EFEK HOVER (Saat Mouse Diarahkan) */
+.channel-card:hover {
+    transform: translateY(-5px); /* Card naik sedikit */
+}
+
+.channel-card:hover .logo-container {
+    background: #2d3e5a;
+    border-color: #3b82f6; /* Berubah jadi biru saat hover */
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2); /* Efek cahaya biru */
+}
+
+.channel-card:hover .channel-name {
+    color: #ffffff; /* Teks jadi putih terang */
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .channel-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di HP */
+        gap: 12px;
+    }
+    .logo-container {
+        height: 70px;
+        padding: 10px;
+    }
 }
 
 .logo-box {
