@@ -1,41 +1,26 @@
-<footer>
-    <div class="container footer-wrapper">
-        <!-- Bagian 1: Brand & Deskripsi -->
-        <div class="footer-section brand-info">
-            <div class="logo">TV<span>Online</span></div>
-            <p>Platform streaming TV Indonesia terlengkap dengan kualitas HD dan tanpa buffer. Nikmati tayangan favorit Anda di mana saja dan kapan saja.</p>
+<footer class="site-footer">
+    <div class="container">
+        <!-- Baris Atas: Link Kebijakan (Penyempurnaan) -->
+        <div class="footer-top-links">
+            <a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="{{ '/disclaimer/' | relative_url }}">Disclaimer</a>
+            <span class="separator">|</span>
+            <a href="{{ '/terms-of-service/' | relative_url }}">Terms of Service</a>
+            <span class="separator">|</span>
+            <a href="{{ '/contact/' | relative_url }}">Contact Us</a>
         </div>
 
-        <!-- Bagian 2: Link Halaman (Sesuai Permintaan Anda) -->
-        <div class="footer-section">
-            <h4>Informasi</h4>
-            <ul class="footer-pages">
-                <li><a href="{{ '/privacy-policy/' | relative_url }}"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
-                <li><a href="{{ '/disclaimer/' | relative_url }}"><i class="fa-solid fa-chevron-right"></i> Disclaimer</a></li>
-                <li><a href="{{ '/terms-of-service/' | relative_url }}"><i class="fa-solid fa-chevron-right"></i> Terms of Service</a></li>
-                <li><a href="{{ '/contact/' | relative_url }}"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
-            </ul>
-        </div>
-
-        <!-- Bagian 3: Sosial Media -->
-        <div class="footer-section">
-            <h4>Ikuti Kami</h4>
-            <div class="social-icons">
-                <a href="#" class="social-box fb"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="social-box tw"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" class="social-box ig"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="social-box yt"><i class="fa-brands fa-youtube"></i></a>
+        <!-- Baris Bawah: Identik dengan Gambar -->
+        <div class="footer-main-bar">
+            <div class="footer-left">
+                <span>&copy; {{ "now" | date: "%Y" }} {{ site.title }} - DMCA - Disclaimer</span>
             </div>
-        </div>
-    </div>
-
-    <!-- Bagian Bawah: Copyright -->
-    <div class="footer-bottom">
-        <div class="container bottom-content">
-            <p>&copy; {{ "now" | date: "%Y" }} <strong>{{ site.title }}</strong>. All Rights Reserved. </p>
-            <div class="footer-badges">
-                <span>DMCA Protected</span>
-                <span>18+ content</span>
+            <div class="footer-right">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-regular fa-square-caret-right"></i></a>
+                <a href="#"><i class="fa-solid fa-circle-nodes"></i></a>
             </div>
         </div>
     </div>
