@@ -1,5 +1,5 @@
 - name: RCTI
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/RCTI_Logo.svg/512px-RCTI_Logo.svg.png"
+  image: "/assets/img/Astro-Awani.webp"
   url: "/channels/rcti"
 - name: SCTV
   image: "https://upload.wikimedia.org/wikipedia/id/thumb/e/e0/SCTV_logo_2005.svg/1200px-SCTV_logo_2005.svg.png"
