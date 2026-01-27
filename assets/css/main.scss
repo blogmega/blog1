@@ -281,25 +281,152 @@ nav {
     background: #111a2e;
 }
 
-/* Footer */
+/* FOOTER STYLES */
 footer {
-    border-top: 1px solid #1e293b;
-    padding: 20px 0;
-    margin-top: 40px;
+    background-color: #0f172a; /* Lebih gelap dari body untuk kontras */
+    border-top: 2px solid #1e293b;
+    padding-top: 50px;
+    margin-top: 60px;
+    color: #94a3b8;
 }
 
-.footer-content {
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr; /* Pembagian kolom */
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-section h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: #3b82f6;
+}
+
+/* Brand Section */
+.brand-info p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+/* Link Navigasi */
+.footer-pages {
+    list-style: none;
+}
+
+.footer-pages li {
+    margin-bottom: 12px;
+}
+
+.footer-pages a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-pages a i {
+    font-size: 10px;
+    color: #3b82f6;
+}
+
+.footer-pages a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-box {
+    width: 40px;
+    height: 40px;
+    background: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-box:hover {
+    background: #3b82f6;
+    transform: translateY(-3px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background: #0b1120;
+    padding: 20px 0;
+    border-top: 1px solid #1e293b;
+}
+
+.bottom-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
-    color: #94a3b8;
 }
 
-.social-icons {
+.footer-badges {
     display: flex;
     gap: 15px;
-    font-size: 16px;
+}
+
+.footer-badges span {
+    background: #1e293b;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-wrapper {
+        grid-template-columns: 1fr; /* Menjadi 1 kolom di HP */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-section h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-pages a {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .bottom-content {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 /* Mobile Responsive */
