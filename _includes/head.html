@@ -18,4 +18,18 @@
     <!-- CSS & Fonts -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    {% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "{{ page.title }} Live Streaming",
+  "description": "{{ page.program }}",
+  "thumbnailUrl": "{{ page.image | absolute_url }}",
+  "uploadDate": "{{ page.date | date_to_xmlschema }}",
+  "embedUrl": "{{ page.video_id }}",
+  "interactionCount": "12540"
+}
+</script>
+{% endif %}
 </head>
