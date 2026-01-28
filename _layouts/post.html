@@ -15,7 +15,7 @@ layout: default
             {% for channel in sorted_posts %}
             <a href="{{ channel.url | relative_url }}" class="sidebar-item {% if page.url == channel.url %}active{% endif %}">
                 <div class="sidebar-logo">
-                    <img src="{{ channel.image | relative_url }}" alt="{{ channel.title }}">
+                    <img loading="lazy" src="{{ channel.image | relative_url }}" alt="{{ channel.title }}">
                 </div>
                 <div class="sidebar-info">
                     <span class="ch-name">{{ channel.title }}</span>
