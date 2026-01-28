@@ -199,42 +199,124 @@ a {
     cursor: pointer;
 }
 
-/* Jadwal Sepak Bola */
-.schedule-box {
-    background: #111a2e;
-    border-radius: 8px;
+/* CONTAINER UTAMA */
+.agenda-container {
+    width: 100%;
+    margin: 20px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    border-radius: 4px;
     overflow: hidden;
-    margin-top: 30px;
-    border: 1px solid #1e293b;
+    background: #fff;
 }
 
-.schedule-header {
-    background: #cbd5e1;
-    color: #0f172a;
+/* HEADER HIJAU */
+.agenda-header-green {
+    background-color: #57B230;
+    color: #fff;
     text-align: center;
     padding: 12px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
 }
 
-.schedule-item {
+/* LIST PERTANDINGAN */
+.agenda-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.match-entry {
+    border-bottom: 1px solid #efeff0;
+}
+
+.match-trigger {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #404040;
+    background: #fff;
+    transition: background 0.2s;
+}
+
+/* EFEK WARNA HIJAU MUDA SAAT AKTIF/DIKLIK */
+.match-trigger.active {
+    background-color: #94cc7c !important; /* Warna hijau muda sesuai gambar */
+}
+
+.match-time {
+    background: #fff;
+    border: 1px solid #d0d0d3;
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 15px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.match-icon {
+    margin-right: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.match-title {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+/* DROPDOWN CHANNEL */
+.channel-dropdown {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+.channel-link {
     display: flex;
     justify-content: space-between;
-    padding: 15px 20px;
-    border-bottom: 1px solid #1e293b;
-    font-size: 14px;
+    align-items: center;
+    padding: 10px 15px 10px 50px; /* Menjorok ke dalam */
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
+    color: #789;
+    font-size: 13px;
+    position: relative;
 }
 
-.schedule-item .time { font-weight: bold; width: 80px; }
-.schedule-item .match { flex: 1; text-align: center; }
-.schedule-item .match .vs { color: #fbbf24; font-weight: bold; margin: 0 5px; }
-.schedule-item .league { color: #64748b; font-size: 12px; width: 120px; text-align: right; }
+.channel-link:before {
+    content: '►'; /* Panah kecil di depan nama channel */
+    position: absolute;
+    left: 35px;
+    font-size: 9px;
+    color: #94a3b8;
+}
 
-.schedule-footer {
-    padding: 10px 20px;
-    background: #0b1120;
+.channel-link:hover {
+    color: #2e9afe;
+    background: #f8f9fa;
+}
+
+/* BADGE KUALITAS (720p/1080p) */
+.ch-quality {
     font-size: 11px;
-    color: #64748b;
+    border: 1px solid #d0d0d3;
+    padding: 2px 8px;
+    border-radius: 10px;
+    color: #000;
+    font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .match-title { font-size: 12px; }
+    .channel-link { padding-left: 30px; }
+    .channel-link:before { left: 15px; }
 }
 
 /* ==========================================================================
