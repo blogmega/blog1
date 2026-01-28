@@ -33,4 +33,23 @@
 }
 </script>
 {% endif %}
+
+    {% if page.url == "/" %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {% for match in site.data.matches %}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "name": "{{ match.team1 }} vs {{ match.team2 }}",
+          "description": "Streaming {{ match.league }} jam {{ match.time }}"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    </script>
+    {% endif %}
 </head>
