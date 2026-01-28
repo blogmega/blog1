@@ -15,18 +15,30 @@ title: Halaman Utama
 <!-- Ads Banner -->
 <div class="ads-banner">ADS 728x90</div>
 
-<!-- Channel Populer -->
+<!-- Channel Populer Carousel -->
 <section class="section-box">
-    <h2 class="section-title"><i class="fa-solid fa-tv"></i> Channel Populer</h2>
-    <div class="channel-grid">
-        {% for channel in site.data.channels %}
-        <a href="{{ channel.url | relative_url }}" class="channel-card">
-            <div class="logo-container">
-                <img src="{{ channel.image }}" alt="Logo {{ channel.name }}">
+    <div class="section-header-carousel">
+        <h2 class="section-title"><i class="fa-solid fa-tv"></i> Channel Populer</h2>
+        <div class="carousel-nav">
+            <button class="nav-btn prev" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="nav-btn next" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack">
+            {% for post in site.posts %}
+            <div class="carousel-card">
+                <a href="{{ post.url | relative_url }}">
+                    <div class="carousel-img-container">
+                        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+                        <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <span class="carousel-ch-name">{{ post.title }}</span>
+                </a>
             </div>
-            <span class="channel-name">{{ channel.name }}</span>
-        </a>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 </section>
 
