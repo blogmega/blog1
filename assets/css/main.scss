@@ -38,64 +38,7 @@ a {
     transition: 0.3s;
 }
 
-/* ==========================================================================
-   2. HEADER & NAVIGATION (Persis Gambar)
-   ========================================================================== */
-.main-header {
-    background-color: #111a2e;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
 
-.nav-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.site-logo {
-    height: 35px;
-    width: auto;
-    display: block;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 8px;
-}
-
-.nav-item {
-    color: #94a3b8;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 4px;
-}
-
-.nav-item:hover {
-    color: #ffffff;
-}
-
-.nav-item.active {
-    background-color: #2563eb; /* Biru sesuai gambar */
-    color: #ffffff !important;
-}
-
-.nav-auth .btn-register {
-    background-color: #1e293b;
-    color: #cbd5e1;
-    font-size: 13px;
-    padding: 8px 18px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border: 1px solid rgba(255,255,255,0.05);
-}
 
 /* ==========================================================================
    3. HOME PAGE COMPONENTS (Hero, Ads, Grid)
