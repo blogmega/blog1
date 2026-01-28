@@ -10,35 +10,10 @@
 @import "404";
 
 
-/* ==========================================================================
-   1. RESET & BASE STYLES
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
-
-body {
-    background-color: #0b1120; /* Dark Navy Background */
-    color: #ffffff;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-a {
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background-color: #0b1120; color: #fff; line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+a { text-decoration: none; transition: 0.3s; }
 
 /* ==========================================================================
    3. HOME PAGE COMPONENTS (Hero, Ads, Grid)
