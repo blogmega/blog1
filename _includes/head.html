@@ -1,17 +1,21 @@
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Dasar -->
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - Nonton TV Online Gratis{% endif %}</title>
+    <meta name="description" content="{% if page.program %}{{ page.program }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="keywords" content="TV Online, Live Streaming, TV Malaysia, TV Indonesia, Streaming Bola">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
-{% include seo.html %}
-  
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Lora:400,400i,700" rel="stylesheet">
+    <!-- Open Graph (Untuk Share ke FB/WhatsApp agar muncul gambar) -->
+    <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
+    <meta property="og:description" content="{{ page.program | default: site.description }}">
+    <meta property="og:image" content="{{ page.image | absolute_url }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="website">
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/apple-touch-icon.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicon.ico">
-
-  <!-- CSS files -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6928712360601496"
-     crossorigin="anonymous"></script>
+    <!-- CSS & Fonts -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
