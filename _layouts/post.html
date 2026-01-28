@@ -3,18 +3,19 @@ layout: default
 ---
 
 <div class="channel-container">
-    <!-- SIDEBAR KIRI: DAFTAR CHANNEL -->
+    <!-- SIDEBAR KIRI: DAFTAR CHANNEL (Persis Gambar) -->
     <aside class="channel-sidebar">
         <div class="search-box">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Cari Channel...">
+            <input type="text" id="channelSearch" placeholder="Cari Channel..." onkeyup="searchChannel()">
         </div>
         
-        <div class="sidebar-list">
-            {% for channel in site.posts %}
+        <div class="sidebar-list" id="channelList">
+            {% assign sorted_posts = site.posts | sort: 'title' %}
+            {% for channel in sorted_posts %}
             <a href="{{ channel.url | relative_url }}" class="sidebar-item {% if page.url == channel.url %}active{% endif %}">
                 <div class="sidebar-logo">
-                    <img src="{{ channel.image }}" alt="{{ channel.title }}">
+                    <img src="{{ channel.image | relative_url }}" alt="{{ channel.title }}">
                 </div>
                 <div class="sidebar-info">
                     <span class="ch-name">{{ channel.title }}</span>
@@ -25,39 +26,65 @@ layout: default
         </div>
     </aside>
 
-    <!-- KONTEN UTAMA: PLAYER -->
+    <!-- KONTEN UTAMA: PLAYER IFRAME -->
     <main class="player-content">
         <div class="player-header">
-            <i class="fa-solid fa-circle-play"></i> <h2>{{ page.title }}</h2>
+            <div class="live-indicator">
+                <i class="fa-solid fa-circle"></i> <span>LIVE</span>
+            </div>
+            <h2>{{ page.title }}</h2>
         </div>
 
-        <!-- Video Player Area -->
+        <!-- Video Player Iframe Area -->
         <div class="video-wrapper">
-            <div class="video-placeholder">
-                <!-- Disini tempat iframe/player video anda -->
-                <img src="https://via.placeholder.com/800x450/111a2e/ffffff?text=Video+Player+Streaming" alt="Player">
-                <div class="player-controls">
-                    <i class="fa-solid fa-play"></i>
-                    <i class="fa-solid fa-volume-high"></i>
-                    <div class="progress-bar"></div>
-                    <i class="fa-solid fa-expand"></i>
-                </div>
+            <div class="iframe-container">
+                <iframe 
+                    src="{{ page.video_id }}" 
+                    allowfullscreen="true" 
+                    webkitallowfullscreen="true" 
+                    mozallowfullscreen="true" 
+                    scrolling="no" 
+                    frameborder="0">
+                </iframe>
             </div>
         </div>
 
-        <!-- Info Program -->
+        <!-- Info Program (Sesuai Gambar) -->
         <div class="program-info">
             <h1 class="program-title">SEGERA, {{ page.program }}</h1>
-            <div class="program-meta">
-                <span class="program-name">{{ page.title }}</span>
-                <span class="program-desc">{{ page.program }}</span>
-                <p class="program-time">{{ page.jadwal }} | {{ page.title }}</p>
+            
+            <div class="program-details">
+                <div class="program-brand">
+                    <img src="{{ page.image | relative_url }}" alt="Logo">
+                    <div class="brand-text">
+                        <span class="name">{{ page.title }}</span>
+                        <span class="desc">{{ page.program }}</span>
+                    </div>
+                </div>
+                <p class="program-schedule">{{ page.jadwal }} | {{ page.title }}</p>
             </div>
         </div>
 
-        <!-- Ads di bawah player -->
+        <!-- Ads Banner -->
         <div class="ads-banner-player">
             ADS 728x90
         </div>
     </main>
 </div>
+
+<!-- Script Sederhana untuk Fitur Cari di Sidebar -->
+<script>
+function searchChannel() {
+    let input = document.getElementById('channelSearch').value.toUpperCase();
+    let list = document.getElementById('channelList');
+    let items = list.getElementsByClassName('sidebar-item');
+    for (let i = 0; i < items.length; i++) {
+        let name = items[i].getElementsByClassName('ch-name')[0];
+        if (name.innerText.toUpperCase().indexOf(input) > -1) {
+            items[i].style.display = "";
+        } else {
+            items[i].style.display = "none";
+        }
+    }
+}
+</script>
