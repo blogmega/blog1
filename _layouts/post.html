@@ -1,28 +1,63 @@
 ---
 layout: default
 ---
-<article class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <time class="post-date" datetime="{{ page.date }}">
-    {% assign d = page.date | date: "%-d" %}
-    {% assign m = page.date | date: "%B" %}
-    {% case m %}
-      {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-      {% when 'September' %}Sept.
-      {% else %}{{ page.date | date: "%b" }}.
-      {% endcase %}
-    {% case d %}
-      {% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %}
-    {{ page.date | date: "%Y" }}
-    </time>
-  </header>
+<div class="channel-container">
+    <!-- SIDEBAR KIRI: DAFTAR CHANNEL -->
+    <aside class="channel-sidebar">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Cari Channel...">
+        </div>
+        
+        <div class="sidebar-list">
+            {% for channel in site.posts %}
+            <a href="{{ channel.url | relative_url }}" class="sidebar-item {% if page.url == channel.url %}active{% endif %}">
+                <div class="sidebar-logo">
+                    <img src="{{ channel.image }}" alt="{{ channel.title }}">
+                </div>
+                <div class="sidebar-info">
+                    <span class="ch-name">{{ channel.title }}</span>
+                    <span class="ch-tag">{{ channel.category }}</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </aside>
 
-  <div class="post-content pretty-links">
-    {{ content }}
-  </div>
+    <!-- KONTEN UTAMA: PLAYER -->
+    <main class="player-content">
+        <div class="player-header">
+            <i class="fa-solid fa-circle-play"></i> <h2>{{ page.title }}</h2>
+        </div>
 
-</article>
+        <!-- Video Player Area -->
+        <div class="video-wrapper">
+            <div class="video-placeholder">
+                <!-- Disini tempat iframe/player video anda -->
+                <img src="https://via.placeholder.com/800x450/111a2e/ffffff?text=Video+Player+Streaming" alt="Player">
+                <div class="player-controls">
+                    <i class="fa-solid fa-play"></i>
+                    <i class="fa-solid fa-volume-high"></i>
+                    <div class="progress-bar"></div>
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+            </div>
+        </div>
 
-<div class="box-card">{% include postcard.html %}</div>
+        <!-- Info Program -->
+        <div class="program-info">
+            <h1 class="program-title">SEGERA, {{ page.program }}</h1>
+            <div class="program-meta">
+                <span class="program-name">{{ page.title }}</span>
+                <span class="program-desc">{{ page.program }}</span>
+                <p class="program-time">{{ page.jadwal }} | {{ page.title }}</p>
+            </div>
+        </div>
+
+        <!-- Ads di bawah player -->
+        <div class="ads-banner-player">
+            ADS 728x90
+        </div>
+    </main>
+</div>
